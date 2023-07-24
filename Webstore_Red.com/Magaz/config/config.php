@@ -2,9 +2,9 @@
     $servername = "localhost";
     $username = "root";
     $pass = "";
-    $dbname = "RED";
+    $dbname = "Red.com";
 
-    $dsn = "mysql:host=localhost;dbname=RED";
+    $dsn = "mysql:host=localhost;dbname=Red.com";
 
     $dbh = new PDO($dsn, $username, $pass);
 
