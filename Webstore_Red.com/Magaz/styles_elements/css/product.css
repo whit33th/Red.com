@@ -71,7 +71,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 10px;
-  background-color: white;
+
   border-radius: 10px;
   transition: 0.5s;
 }

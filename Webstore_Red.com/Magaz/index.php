@@ -57,9 +57,6 @@ else{
         ?>
         <a href="index.php?action=on&category=<?= $listCategory['name'] ?>" class="category-item"><?= $listCategory['name'] ?></a>
         <?php }?>
-        <a href="#Polo" class="category-item">POLO</a>
-        <a href="#Shirts" class="category-item">SHIRTS</a>
-        <a href="#Pajamas" class="category-item">PAJAMAS</a>
     </div>
     <section>
         <h2><?=$category ?></h2>

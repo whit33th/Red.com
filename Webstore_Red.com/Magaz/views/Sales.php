@@ -15,7 +15,7 @@ session_start();
 <body>
     <header id="header">
         <div class="header-menu">
-            <a href="index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
+            <a href="../index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
             <div class="header-menu-item "><a href="News.php">News</a> </div>
             <div class="header-menu-item"><a href="Sales.php">Sales
                 </a> </div>

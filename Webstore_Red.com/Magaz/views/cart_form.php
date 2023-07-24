@@ -16,17 +16,17 @@ session_start();
 <header id="header">
     <div class="header-menu">
         <a href="../index.php"><img id="logo"
-                                    src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
+src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png" alt="logo"></a>
         <div class="header-menu-item "><a href="News.php">News</a> </div>
         <div class="header-menu-item"><a href="Sales.php">Sales</a> </div>
         <div class="header-menu-item "><a href="FAQ.php">FAQ</a> </div>
         <div class="header-menu-item "><a href="Contacts.php">Contacts</a> </div>
         <div class="account"><a href="user_page.php"><img
-                        src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"></a>
+                        src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png" alt=""></a>
         </div>
         <div class="total">
             <a href="../views/cart_form.php">
-                <img src="https://cdn-icons-png.flaticon.com/512/1374/1374128.png">
+                <img src="https://cdn-icons-png.flaticon.com/512/1374/1374128.png" alt="">
                 <?php
                 $totalQuantity = 0;
                 if(isset($_SESSION['cart'])){
@@ -76,7 +76,7 @@ session_start();
             ?>
                         <tr>
                             <td><?=$row['id'] ?></td>
-                            <td><?=$row['image'] ?> </td>
+                            <td><img class="img_cart" src="<?=$row['image'] ?>" alt="cart"> </td>
                             <td><?=$row['title'] ?></td>
                             <td><?=$row['price']?></td>
                             <td class="action in[">

@@ -15,13 +15,13 @@ session_start();
 <body>
     <header id="header">
         <div class="header-menu">
-            <a href="index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
+            <a href="../index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
             <div class="header-menu-item "><a href="News.php">News</a> </div>
             <div class="header-menu-item"><a href="Sales.php">Sales
             </a> </div>
             <div class="header-menu-item "><a href="FAQ.php">FAQ</a> </div>
             <div class="header-menu-item "><a href="Contacts.php">Contacts</a> </div>
-            <div class="account"><a href="views/user_page.php"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"></a>
+            <div class="account"><a href="../views/user_page.php"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"></a>
             </div>
             <div class="total">
                 <a href="cart_form.php">

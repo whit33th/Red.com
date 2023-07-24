@@ -83,10 +83,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
             ?>
             <a href="../index.php?category=<?= $listCategory['name'] ?>" class="category-item"><?= $listCategory['name'] ?></a>
         <?php }?>
-        <a href="#Shorts" class="category-item">PANTS/SHORTS</a>
-        <a href="#Polo" class="category-item">POLO</a>
-        <a href="#Shirts" class="category-item">SHIRTS</a>
-        <a href="#Pajamas" class="category-item">PAJAMAS</a>
+
     </div>
     <div class="product-border">
         <?php

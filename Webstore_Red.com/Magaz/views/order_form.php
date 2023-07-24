@@ -31,41 +31,41 @@
     </header>
     <main>
 
-        
-        <form action="../models/order_proces.php" method="post">
-            
-            <input class="half-input" type="text" autocomplete="on" name="name" placeholder="Name">
-           
-            <input class="half-input" type="text" autocomplete="on" name="surname" placeholder="Surname">
-            
-            <input type="tel" name="tel" placeholder="Tel.">
-            
-            <input type="text" name="address" autocomplete="on" placeholder="Address">
-            
-            <input type="text" name="email" autocomplete="on" placeholder="Email">
-            
-            <input type="text" name="id_code" placeholder="00-000">
-            <div class="buttons">
-                <button class="button-buy" type="submit" name="submit">
-                    <p>Buy</p>
-                </button>
-                <?php
-                session_start();
-                if (isset($_SESSION["error_message"])){
-                    echo <<< ERROR
+        <div class="centered-div"><form action="../models/order_proces.php" method="post">
+
+                <input class="half-input" type="text" autocomplete="on" name="name" placeholder="Name">
+
+                <input class="half-input" type="text" autocomplete="on" name="surname" placeholder="Surname">
+
+                <input type="tel" name="tel" placeholder="Tel.">
+
+                <input type="text" name="address" autocomplete="on" placeholder="Address">
+
+                <input type="text" name="email" autocomplete="on" placeholder="Email">
+
+                <input type="text" name="id_code" placeholder="00-000">
+                <div class="buttons">
+                    <button class="button-buy" type="submit" name="submit">
+                        <p>Buy</p>
+                    </button>
+                    <?php
+                    session_start();
+                    if (isset($_SESSION["error_message"])){
+                        echo <<< ERROR
                 <p style="color: white">Błąd!</p>
                 <p style="color: white" >$_SESSION[error_message]</p>
                 ERROR;
-                    unset($_SESSION["error_message"]);
-                }elseif(isset($_SESSION["success_message"])){
-                    echo <<< ERROR
+                        unset($_SESSION["error_message"]);
+                    }elseif(isset($_SESSION["success_message"])){
+                        echo <<< ERROR
                 <p >$_SESSION[success_message]</p>
                 ERROR;
-                    unset($_SESSION["success_message"]);
-                }
-                ?>
-            </div>
-        </form>
+                        unset($_SESSION["success_message"]);
+                    }
+                    ?>
+                </div>
+            </form></div>
+
 
     </main>
     <footer class="footer">
