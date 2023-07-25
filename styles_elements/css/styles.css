@@ -1,0 +1,332 @@
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(246, 246, 246);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.3s;
+	opacity: 1;
+}
+
+a:hover {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+#header {
+	transition: transform 0.3s ease;
+	/* Добавляем плавную анимацию при изменении свойства */
+}
+
+.hide {
+	transform: translateY(-100%);
+}
+
+header {
+
+	width: 100%;
+	position: fixed;
+	background-color: #000;
+	color: #fff;
+	z-index: 100;
+}
+
+header img {
+	width: 100px;
+	padding: 5px 0px 0px;
+}
+
+header a {
+	font-size: large;
+	color: white;
+}
+
+input {
+	border: 3px solid white;
+	border-radius: 5px;
+	height: 25px;
+}
+
+
+
+
+
+
+main {
+	max-width: 80%;
+	margin: 0 auto;
+	top: 76px;
+	position: relative;
+}
+
+section {
+	position: relative;
+	top: 70px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 0 0 20px;
+}
+
+.account img {
+	filter: invert(100%);
+	height: 30px;
+	width: auto;
+}
+
+.total img {
+	filter: invert(100%);
+	height: 30px;
+	width: auto;
+
+}
+
+.header-menu-item:hover {
+	position: relative;
+}
+
+.header-menu-item:hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://i.gifer.com/ZVLJ.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: invert(100%);
+	z-index: -1;
+}
+
+
+#logo {
+	background-repeat: round;
+	background-image: url(https://i.gifer.com/4NB4.gif);
+	background-size: contain;
+}
+
+
+
+.header-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 90%;
+	width: 1220px;
+	margin: 0 auto;
+}
+
+
+.header-menu-item {
+	margin-right: 10px;
+	
+}
+
+
+.category {
+	top: 30px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.category-item {
+	flex: 1 0 250px;
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(247, 247, 247);
+	border-radius: 5px;
+	border: 1px solid rgb(175, 175, 175);
+	transition: 0.5s;
+
+}
+
+.category-item:hover {
+	filter: invert(100%);
+	transition: 0.3s;
+}
+
+.category a {
+	color: black;
+	border-radius: 10px;
+}
+
+.category a:hover {
+	position: relative;
+}
+
+.category a:hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://i.gifer.com/ZVLJ.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: invert(100%);
+	z-index: -1;
+}
+
+.products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+	margin-bottom: 100px;
+}
+
+.products a {
+	color: black;
+}
+
+.product {
+	transition: 0.2s;
+}
+
+.product:hover {
+	transition: 0.3s;
+	transform: scale(1.01);
+}
+
+.product img {
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.product h3 {
+
+	margin: 10px 0;
+}
+
+.product p {
+
+	margin: 10px 0;
+}
+
+.footer {
+	position: relative;
+	top: 100px;
+	background: #0d0d0e;
+	color: #fff;
+	
+	padding: 30px;
+	z-index: 10;
+	background-repeat: round;
+	background-image: url(https://i.pinimg.com/originals/fe/ae/ea/feaeea33c22a7a7195e430a9bfe538c5.gif);
+	background-size: contain;
+}
+
+.footer-contect {
+	display: flex;
+	margin: 30px;
+	position: relative;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.scroll-to-top-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+
+	color: #fff;
+	font-size: 24px;
+	border: none;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	z-index: 9999;
+  }
+  
+  .scroll-to-top-button.show {
+	opacity: 1;
+	visibility: visible;
+	  background-color: white;
+  }
+  
+  .admin-but {
+	margin-top: 5px;
+	background-color: transparent;
+	color: #fff;
+	width: 100%;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 5px;
+	transition: 0.2s;
+  }
+  .admin-but:hover {
+	background-color: #000;
+	transition: 0.2s;
+  }
+
+.accordion-header {
+	cursor: pointer;
+	transition: color 0.4s;
+	text-align: center;
+	text-decoration: underline ;
+
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease-out;
+}
+
+.accordion.open .accordion-content {
+	max-height: 200px; /* Подберите желаемую высоту */
+}
+
+.accordion *{
+	color: white;
+}
+@media (max-width: 767px) {
+	.category {
+		flex-direction: column;
+		top: 30px;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		border-radius: 10px;
+		transition: 0.5s;
+	}
+
+	.category a {
+
+		width: 100%;
+		max-height: 20px;
+		color: black;
+		border-radius: 10px;
+	}
+}
+
+
+  
+  
+  
+  
+  
