@@ -15,7 +15,7 @@ if (isset($_POST['submit']) && isset($_SESSION['cart'])){
 
     if (!empty($errors)) {
         $_SESSION["error_message"] = implode("<br>", $errors);
-        header("Location: ../views/order_form.php?error=" . urlencode($errorMessage));
+        header("Location: ../html/order_form.php?error=" . urlencode($errorMessage));
         exit();
     }
 
@@ -25,7 +25,7 @@ if (isset($_POST['submit']) && isset($_SESSION['cart'])){
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errorMessage = "Niepoprawna wartość";
         $_SESSION['error_message'] = $errorMessage;
-        header("Location: ../views/order_form.php?error=" . urlencode($errorMessage));
+        header("Location: ../html/order_form.php?error=" . urlencode($errorMessage));
         exit();
     }
 
@@ -34,7 +34,7 @@ if (isset($_POST['submit']) && isset($_SESSION['cart'])){
 
         $errorMessage = "Niepoprawna wartość id Code";
         $_SESSION['error_message'] = $errorMessage;
-        header("Location: ../views/order_form.php?error=" . urlencode($errorMessage));
+        header("Location: ../html/order_form.php?error=" . urlencode($errorMessage));
         exit();
     }
     $name = htmlspecialchars(trim($_POST['name']));
@@ -94,11 +94,11 @@ if (isset($_POST['submit']) && isset($_SESSION['cart'])){
     // Перенаправление пользователя на страницу подтверждения покупки или другую страницу по вашему выбору
     $message = "Thank you for ordering id#";
     /*$_SESSION['success_message'] = $messag.$row[0]['id'];*/
-    header("Location: ../views/complete_order.php?success=" . urlencode($message));
+    header("Location: ../html/complete_order.php?success=" . urlencode($message));
     exit();
 }else{
     $message = "Cart is empty!";
-    header("Location: ../views/cart_form.php?error=" . urlencode($message));
+    header("Location: ../html/cart_form.php?error=" . urlencode($message));
     exit();
 }
 ?>

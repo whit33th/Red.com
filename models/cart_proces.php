@@ -10,7 +10,7 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         if ($newQuantity < 0 || !is_numeric($newQuantity)) {
             // Некорректное количество товаров, перенаправление с сообщением об ошибке
             $_SESSION["error_message"] = "InvalidQuantity";
-            header("Location: ../views/cart_form.php?error");
+            header("Location: ../html/cart_form.php?error");
             exit();
         }
     }
@@ -26,7 +26,7 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         }
     }
     // Перенаправление на страницу корзины или другую нужную страницу
-    header("Location: ../views/cart_form.php");
+    header("Location: ../html/cart_form.php");
     exit();
 
 }elseif(isset($_GET['action'])){
@@ -36,12 +36,12 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         $id = $_GET['id'];
         if(isset($_SESSION['cart'][$id])){
             unset($_SESSION['cart'][$id]);
-            header("Location: ../views/cart_form.php");
+            header("Location: ../html/cart_form.php");
             exit();
         }
     }else{
         $_SESSION['error_message'] = "Niepoprawna wartość";
-        header("Location: ../views/cart_form.php");
+        header("Location: ../html/cart_form.php");
         exit();
     }
 }
@@ -58,7 +58,7 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         if ($newQuantity < 0 || !is_numeric($newQuantity)) {
             // Некорректное количество товаров, перенаправление с сообщением об ошибке
             $_SESSION["error_message"] = "InvalidQuantity";
-            header("Location: ../views/cart_form.php?error");
+            header("Location: ../html/cart_form.php?error");
             exit();
         }
     }
@@ -74,7 +74,7 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         }
     }
     // Перенаправление на страницу корзины или другую нужную страницу
-    header("Location: ../views/cart_form.php");
+    header("Location: ../html/cart_form.php");
     exit();
 
 }elseif(isset($_GET['action'])){
@@ -84,12 +84,12 @@ if (isset($_POST['update']) && !empty($_POST['quantity'])) {
         $id = $_GET['id'];
         if(isset($_SESSION['cart'][$id])){
             unset($_SESSION['cart'][$id]);
-            header("Location: ../views/cart_form.php");
+            header("Location: ../html/cart_form.php");
             exit();
         }
     }else{
         $_SESSION['error_message'] = "Niepoprawna wartość";
-        header("Location: ../views/cart_form.php");
+        header("Location: ../html/cart_form.php");
         exit();
     }
 }

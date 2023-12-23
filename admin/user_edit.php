@@ -8,10 +8,10 @@ require_once '../config/config.php';
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <link rel="stylesheet" href="../styles_elements/css/styles.css">
-    <link rel="stylesheet" href="../styles_elements/css/login.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/login.css">
 </head>
-<body style="background-image: url(../styles_elements/gif/matthew-harris-edwards-lightning-flashes.gif); background-size: cover; background-repeat: no-repeat;">
+<body style="background-image: url(../styles/gif/matthew-harris-edwards-lightning-flashes.gif); background-size: cover; background-repeat: no-repeat;">
 
 <a href="admin.php">
     <img height="20px" style="padding: 10px; filter: invert(100%)" src="https://cdn.onlinewebfonts.com/svg/download_349454.png">

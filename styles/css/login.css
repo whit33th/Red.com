@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #0d0d0e;
 }
 
 .centered-div {
@@ -8,9 +8,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 99vh;
+  height: 100dvh;
   border: 1px solid black;
-  border-radius: 10px;
+  background-color: currentColor;
   background-position: center;
   background-image: url(https://static.wixstatic.com/media/67da73_05ce5d18b7004e7389821a5644edbe5d~mv2.gif);
   background-repeat: no-repeat;
@@ -19,8 +19,8 @@ body {
 .centered-div button {
   padding: 5px 15px;
   background-color: #000000;
-  color: #ffffff;
-  border: 2px solid rgb(255, 255, 255);
+  color: #dfdfdf;;
+  border: 2px solid rgb(225, 225, 225);
   border-radius: 4px;
   cursor: pointer;
   transition: 0.2s;
@@ -52,12 +52,53 @@ td a {
 }
 
 th {
+  background-color: white;
   font-weight: 300;
   padding: 12px 10px;
   border-bottom: 3px solid rgb(255, 255, 255);
-  color: #ffffff;
+  color: black;
 }
-
+.count-th {
+  font-weight: bold;
+  border-radius: 0 10px 0 0;
+}
+.image-th {
+  font-weight: bold;
+  border-radius: 10px 0 0 0;
+}
+.info-th {
+  font-weight: bold;
+}
+.image-td {
+  width: 20%;
+}
+.count-in-cart-input {
+  padding: 0;
+  width: 30px;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 0;
+}
+.count-in-cart-but {
+  color: white;
+  pointer-events: none;
+  width: 30px;
+  height: auto;
+  background-color: #0d0d0e;
+  border: 0px solid;
+  border-radius: 5px;
+}
+.count-in-cart {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+.count-in-cart div {
+  display: flex;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+}
 .action a {
   display: block;
   width: 100%;
@@ -74,7 +115,7 @@ th {
 }
 
 td {
-  padding: 10px;
+  max-width: 60px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -92,7 +133,7 @@ form {
 
 form p {
   color: #fff;
-  margin-bottom: 5px;
+
 }
 
 form input,
@@ -135,11 +176,17 @@ form button {
 }
 
 form.log_reg input {
+  outline: none;
   padding: 5px 2px;
   width: 244px;
+  text-align: center;
 }
 
 .img_cart {
   width: 100%;
-  max-width: 150px;
+
+}
+.count-td {
+  max-width: 70px;
+  padding: 10px;
 }

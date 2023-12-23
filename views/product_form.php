@@ -39,8 +39,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <meta charset="UTF-8">
     <title>RED</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles_elements/css/styles.css">
-    <link rel="stylesheet" href="../styles_elements/css/product.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/product.css">
 </head>
 
 <body>

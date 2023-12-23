@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(empty($_POST['email']) || empty($_POST['password'])){
         $_SESSION["error_message"] = "Wypełni pola wymagane!";
-        header("Location: ../views/login_form.php");
+        header("Location: ../html/login_form.php");
         exit();
     }
 
@@ -40,26 +40,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if ($_SESSION['user_form'] == 'admin') {
                             header("Location: ../admin/admin.php");
                         } else {
-                            header("Location: ../views/user_page.php");
+                            header("Location: ../html/user_page.php");
                         }
                         exit();
                     } else {
                         $_SESSION["error_message"] = "Błędny login lub hasło!";
-                        header("Location: ../views/login_form.php");
+                        header("Location: ../html/login_form.php");
                         exit();
                     }
         } else {
             $_SESSION["error_message"] = "Błędny login lub hasło!";
-            header("Location: ../views/login_form.php");
+            header("Location: ../html/login_form.php");
             exit();
         }
     } catch (PDOException $e) {
         // Обработка ошибок базы данных
         $_SESSION["error_message"] = "Error BD: " . $e->getMessage();
-        header("Location: ../views/error_page.php");
+        header("Location: ../html/error_page.php");
         exit();
     }
 } else {
-    header("Location: ../views/login_form.php");
+    header("Location: ../html/login_form.php");
     exit();
 }

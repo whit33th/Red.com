@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>
-    <link rel="stylesheet" href="../styles_elements/css/styles.css">
-    <link rel="stylesheet" href="../styles_elements/css/login.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/login.css">
 </head>
 
 <body>

@@ -16,8 +16,8 @@ $user = $updateUserStmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Update User</title>
-    <link rel="stylesheet" href="../styles_elements/css/styles.css">
-    <link rel="stylesheet" href="../styles_elements/css/login.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/login.css">
 </head>
 <body>
 <a href="user_edit.php">

@@ -16,8 +16,8 @@ $product = $updateProductStmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Update Product</title>
-    <link rel="stylesheet" href="../styles_elements/css/styles.css">
-    <link rel="stylesheet" href="../styles_elements/css/login.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/login.css">
 </head>
 <body>
 <a href="product_edit.php">

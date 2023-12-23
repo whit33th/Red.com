@@ -8,9 +8,28 @@ galleryImages.forEach(image => {
   });
 });
 
-
-function toggleCart() {
-  var cart = document.getElementById('cart');
-  cart.classList.toggle('open');
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
+
+window.onscroll = function () { toggleScrollToTopButton() };
+function toggleScrollToTopButton() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+}
+
+
+  function togglePopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+
 
