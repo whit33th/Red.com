@@ -2,18 +2,20 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
+
   float: left;
   justify-content: center;
 }
 
 .product-pictures {
-  padding: 30px;
-  max-width: 592px;
+  width: 60%;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 10px;
+
 }
 .product-name h3 {
   FONT-SIZE: 1.3EM;
@@ -115,7 +117,7 @@
 
 
 .main-photo img {
-  max-height: 610px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +128,7 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
+
   align-items: center;
 }
 
@@ -147,7 +149,7 @@
 }
 
 .product-info {
-  width: 450px;
+  width: 40%;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -300,18 +302,41 @@ button {
   width: 30%;
 }
 
+@media screen and (max-width: 1150px) {
+  .product-border {
+    flex-wrap: wrap;
+  }
+  .product-pictures{
+    width: 100%;
+    align-items: center;
+  }
+  .product-info{
+    width: 100%;
+  }
+  .main-photo{
+    max-width: 700px;
+    max-height: 600px;
+  }
+}
+
+
 @media screen and (max-width: 767px) {
-  .gallery-images img {
-    width: 56px;
-    height: 56px;
+  .gallery-images{
+    justify-content: normal;
+  }
+  .gallery {
+    overflow: overlay;
+  }
+  .gallery-images img{
   }
   .DeliveryInfoIco {
     width: 24px;
     height: 24px;
   }
   .main-photo {
-    width: 320px;
+    width: 100%;
     height: auto;
+
   }
   .add_to_favorite{
     width: 32px;
