@@ -1,0 +1,168 @@
+
+<?php
+
+session_start();
+if(!isset($_GET['category'])){
+        header("Location: index.php?category=Shoes");
+    }
+else{
+    $category = $_GET['category'];
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>RED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="stylesheet" href="styles/css/news.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+<div class="content">
+<header id="header" class="header">
+    <div class="header-menu">
+        <div class="ten-proc-div">
+            <a href="index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
+        </div>
+        <div class="eighty-proc-div"><input class="main_input"></div>
+        <div class="ten-proc-div"><div class="account"><a href="views/user_page.php"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"></a>
+            </div>
+            <div class="total">
+                <a href="views/cart_form.php">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1374/1374128.png">
+                    <?php
+                    $totalQuantity = 0;
+                    if(isset($_SESSION['cart'])){
+                        foreach($_SESSION['cart'] as $item){
+                            $totalQuantity += $item['quantity'];
+                        }
+                    }
+                    echo $totalQuantity;
+                    ?>
+                </a>
+            </div></div>
+
+
+
+
+    </div>
+</header>
+<main>
+    <div class="category">
+
+        <?php
+        require_once "config/config.php";
+
+        $stmt = $dbh->prepare("SELECT name FROM categoty");
+
+        $stmt->execute();
+
+        $listCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($listCategories as $listCategory){
+        ?>
+        <a href="index.php?action=on&category=<?= $listCategory['name'] ?>" class="category-item"><?= $listCategory['name'] ?></a>
+        <?php }?>
+    </div>
+    <section>
+
+            <h2><?=$category ?></h2>
+        <div class="hr">
+        </div>
+        <div class="products ">
+            <?php
+
+            $stmt = $dbh->prepare("SELECT * FROM products WHERE category = :category");
+            $stmt->bindParam(':category', $category, PDO::PARAM_STR);
+            $stmt->execute();
+
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($products as $product) {
+            ?>
+            <a href="views/product_form.php?id=<?=$product['id']?>">
+                <div class="product">
+                    <div class="product_img">
+                        <img src="<?= $product['image']?>">
+
+                    </div>
+
+                    <div class="product-fast-info">
+
+
+                        <p class="season smaller"> New Season</p>
+
+                        <h3><?= $product['title']?></h3>
+                        <div style="display: flex ; align-items: center">
+
+
+                            <p class="price"><?=$product['price']?> zł</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </a>
+                <?php
+            }
+            ?>
+    </section>
+
+
+
+</main>
+<footer class="footer">
+    <div class="footer-contect">
+
+
+        <div class="help-link">
+            <a href="views/News.php">News</a>
+            <a href="views/Sales.php">Sales</a>
+            <a href="views/FAQ.php">FAQ</a>
+            <a href="views/Contacts.php">Contacts</a>
+        </div>
+        <div class="help-link">
+
+        </div>
+        <div class="footer_less_space">
+            <div class="flex help-link">
+                <div class="gap-ten">
+                    <a><img class="ico-inst" src="https://static-00.iconduck.com/assets.00/instagram-icon-512x512-ggh8x3cn.png"></a>
+                    <a><img class="ico-inst" src="https://cdn1.iconfinder.com/data/icons/social-media-set-for-free/32/facebook-512.png"></a>
+                    <a><img class="ico-inst" src="https://cdn1.iconfinder.com/data/icons/social-media-set-for-free/32/twitter-512.png"></a>
+                    <a><img class="ico-inst" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+                </div>
+                <p>Patment:</p>
+                <div class="gap-ten">
+                    <div class="icon-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Иконка">
+
+                    </div>
+                    <div class="icon-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Иконка">
+                    </div>
+                </div>
+            </div>
+
+            <img id="krest" src="https://cdn141.picsart.com/0751c4aa-a6c2-438a-9dae-140faae48c68/373141434044211.png">
+            <div class="footer-copyright"><p>©&nbsp;2023 Red.com</p></div>
+        </div>
+
+
+
+
+    </div>
+</footer>
+
+<img src="https://cdn-icons-png.flaticon.com/512/55/55008.png" onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-button">
+</div>
+
+
+</body>
+
+</html>

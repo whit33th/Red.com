@@ -1,0 +1,55 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>RED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/login.css">
+    <link rel="stylesheet" href="../styles/css/news.css">
+</head>
+
+<body style="height: 100dvh;">
+    <header id="header">
+        <div class="header-menu">
+            <div class="ten-proc-div">
+                <a href="../index.php"><img id="logo" src="https://logos-world.net/wp-content/uploads/2022/01/Playboi-Carti-Emblem.png"></a>
+            </div>
+            <div class="eighty-proc-div"><input class="main_input"></div>
+            <div class="ten-proc-div"><div class="account"><a href="user_page.php"><img src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"></a>
+                </div>
+                <div class="total">
+                    <a href="cart_form.php">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1374/1374128.png">
+                        <?php
+                        $totalQuantity = 0;
+                        if(isset($_SESSION['cart'])){
+                            foreach($_SESSION['cart'] as $item){
+                                $totalQuantity += $item['quantity'];
+                            }
+                        }
+                        echo $totalQuantity;
+                        ?>
+                    </a>
+                </div></div>
+
+
+
+
+        </div>
+    </header>
+    <main>
+        <div class="centered-div">  
+            <div class="accordion">
+            <h3 style="font-size: 30px;">The website is under construction</h3>
+        </div>
+    </main>
+</body>
+
+
+</html>

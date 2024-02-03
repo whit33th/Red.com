@@ -1,0 +1,185 @@
+body {
+  background-color: #0d0d0e;
+}
+
+.centered-div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 99dvh;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-position: center;
+  background-image: url(https://static.wixstatic.com/media/67da73_05ce5d18b7004e7389821a5644edbe5d~mv2.gif);
+  background-repeat: no-repeat;
+}
+
+.centered-div button {
+  padding: 5px 15px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 250px;
+}
+
+.centered-div p {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+}
+
+td a {
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+th {
+  background-color: white;
+  font-weight: 300;
+  padding: 12px 10px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  color: black;
+}
+.count-th {
+  border-radius: 0 10px 0 0;
+}
+.image-th {
+  border-radius: 10px 0 0 0;
+}
+.image-td {
+  width: 20%;
+}
+.count-in-cart-input {
+  padding: 0;
+  width: 30px;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 0;
+}
+.count-in-cart-but {
+  color: white;
+  pointer-events: none;
+  width: 30px;
+  height: auto;
+  background-color: #0d0d0e;
+  border: 0px solid;
+  border-radius: 5px;
+}
+.count-in-cart {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+.count-in-cart div {
+  display: flex;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+}
+.action a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
+.action a:hover {
+  color: white;
+  background-color: #000000;
+}
+
+td {
+  max-width: 60px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+form {
+  width: 100%;
+
+  /* Опционально - ограничение максимальной ширины формы */
+  margin: 0 auto;
+  /* Центрирование формы по горизонтали */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form p {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inp input {
+  padding: 0px;
+}
+
+table input {
+  width: 100%;
+  border: 1px solid black;
+
+
+}
+
+form button {
+  //min-width: 470px;
+}
+
+form button {
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons button {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: 2px solid rgb(74, 74, 74);
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}
+
+form.log_reg input {
+  padding: 5px 2px;
+  width: 244px;
+}
+
+.img_cart {
+  width: 100%;
+
+}
+.count-td {
+  max-width: 70px;
+  padding: 10px;
+}
